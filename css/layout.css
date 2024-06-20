@@ -1,0 +1,439 @@
+body {color: #333;}
+.dsk_only,
+.dsk_nav,
+.sch_btn,
+.banner_wrap,
+.search_wrap{
+  display: none;
+}
+
+section,
+footer {padding: 6rem 0};
+
+header{
+  position: fixed;
+  z-index: 3;
+  height: 6.3rem;
+  width: 100%;
+  padding: 2rem 2rem 0;
+  transition: .3s ease-in-out;
+  font-family: Nanum Square B, sans-serif;
+}
+header .rel{
+  display: flex;
+  justify-content: space-between;
+}
+.header_tit a{
+  display: block;
+  position: relative;
+  /* width: 12rem; */
+}
+header img{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 20rem;
+}
+
+.mob_btn {
+  display: block;
+  width: 2.8rem;
+  height: 1.8rem;
+  position: relative;
+}
+.mob_btn span {
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 20px;
+  background-color: #333;
+  text-indent: -9999px;  /* 힌트로 넣어둔 글자 밀어서 안보이게 함 */
+  position: absolute;
+  transition: 0.3s;
+}
+.mob_btn span:nth-child(1) {top: 0;}
+.mob_btn span:nth-child(2) {top: 50%;}
+.mob_btn span:nth-child(3) {top: 100%;}
+
+/* Scrolling */
+.scrolling header{
+  background-color: rgba(255, 255, 255, 0.688);
+  border-bottom: 0.1rem solid #fff;
+}
+
+/* subNav */
+.subNav {
+  position: fixed;
+  top: 6.3rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #303030;
+  right: -110%;
+  /* right: 0; */
+  transition: right 0.3s ease-in-out;
+}
+
+.subNav .inner {
+  background-color: #F8F8F8;
+  padding: 5rem;
+}
+
+/* pc용메뉴는 안보이게 함 */
+.sub_menu .sub_tit {display: none;}
+.sub_menu .depth1>li {padding: 2rem 0;}
+.sub_menu .depth1>li>span {
+  display: block;
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.sub_menu .depth2 {
+  background-color: #DDD;
+  display: none;
+  padding: 1.5rem;
+  font-weight: 700;
+}
+.sub_menu .depth2>li {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.sub_menu .depth1>li>span:before,
+.sub_menu .depth1>li>span:after {
+  display: block;
+  content: "";
+  width: 2rem;
+  height: .1rem;
+  background-color: rgb(138, 138, 138);
+  position: absolute;
+  right: 0;
+  top: 49%;
+  transition: 0.3s ease-in-out;
+}
+.sub_menu .depth1>li>span::after {
+  transform: rotate(90deg);
+}
+.sub_menu .depth1>li.active >span::after{
+  transform: rotate(0deg);
+}
+
+/* 햄거버메뉴 클릭시 나오는 서브메뉴 */
+.mOpen .subNav{
+  right: 0%;}
+.mOpen header {
+  background-color: rgba(255, 255, 255, 0.688);
+  border-bottom: 0.1rem solid #fff;
+}
+.mOpen .mob_btn span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+.mOpen .mob_btn span:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.mOpen .mob_btn span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+/* Main____________ */
+main{
+  height: 100vh;
+  padding: 0; /* 이 섹션에서는 공통내용에 들어간 패딩을 뺌 */
+  background: url(../image/background.png) no-repeat center/cover;
+}
+main .tit_wrap img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .tit_wrap h2{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  font-family: "Orbitron", sans-serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: rgb(255, 195, 26, 0.3);
+}
+main .tit_wrap h2 + h2{
+  top: 70%;
+  left: 0;
+  color: rgb(255, 2, 0, 0.9);
+}
+
+/* swiper 공통 */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ////////// section0 */
+#section0 {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+#section0 h2 {
+  font-size: 3.6rem;
+  color: #555;
+  margin-bottom: 4rem;
+}
+#section0 .p_img {
+  position: relative;
+  width: 29rem;
+  height: 33rem;
+  margin: auto;
+}
+#section0 div.p_img:before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to bottom, #FFD600, #FF0008);
+  border-radius: 2rem;
+  opacity: 0.2;
+}
+#section0 .p_img img {
+  width: 29rem;
+  height: 33rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  position: relative;
+}
+#section0 .p_caption {
+  padding: 6rem 2rem;
+}
+#section0 .p_caption h3 {
+  font-size: 2.2rem;
+  color: #FF0000;
+  margin-bottom: 4rem;
+  position: relative;
+}
+#section0 .p_caption h3:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 15%;
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #FF0000;
+}
+#section0 .product2 h3 {line-height: 5.4rem;}
+#section0 .p_caption div {
+  font-size: 2rem;
+  line-height: 4rem;
+  margin-bottom: 4rem;
+}
+#section0 p {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  margin-bottom: 4rem;
+}
+#section0 a {
+  display: inline-block;
+  width: 11rem;
+  height: 5rem;
+  background-color: #FF0000;
+  font-size: 1.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 5rem;
+}
+#section0 a:nth-of-type(2) {
+  background-color: #000;
+  margin-left: 2rem;
+}
+
+/* ////////// section1 */
+#section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.8rem;
+}
+#section1 h2 {
+  font-size: 3.6rem;
+  color: #555;
+  margin: 10rem;
+}
+#section1 span {
+  font-size: 2rem;
+  margin: 5rem;
+}
+#section1 span em {display: block;}
+#section1 strong {
+  font-family: Nanum Square EB, sans-serif;
+  line-height: 4rem;
+  font-size: 2rem;
+}
+#section1 h3 {
+  font-size: 2.2rem;
+  color: #FF0000;
+  margin-bottom: 4rem;
+  position: relative;
+}
+#section1 em {
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+}
+#section1 .underline {
+  position: relative;
+  display: block;
+}
+#section1 .underline::before {
+  content: '';
+  bottom: 20%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  border-radius: 2rem;
+  background-color: #FFD65E;
+  z-index: -1;
+}
+#section1 ul {
+  width: 30rem;
+  height: 48rem;
+  border-radius: 3rem;
+  box-shadow: 0.1rem 0.1rem 1rem #888;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5rem;
+}
+#section1 ul img {
+  width: 22rem;
+  margin: 3rem 0;
+}
+#section1 ul li:nth-child(2) {margin-bottom: 2rem;}
+#section1 a {
+  display: inline-block;
+  width: 16rem;
+  height: 6rem;
+  background-color: #FFD65E;
+  border-radius: 1rem;
+  box-shadow: 0.6rem 0.5rem 0rem #F9C6C7;
+  font-size: 2.6rem;
+  font-family: Nanum Square B, sans-serif;
+  color: #222;
+  text-align: center;
+  line-height: 6rem;
+}
+
+/* ////////// section2 */
+
+
+#section2 {
+  background-color: #F0F0F0;
+}
+#section2 .swiper-slide {
+  border: 1px solid #000;
+  width: 5rem;
+}
+#section2 .swiper-slide ul{
+  width: 30rem;
+  background-color: #eee;
+}
+#section2 ul img {
+  width: 26.4rem;
+  height: 36.8rem;
+  object-fit: cover;
+  margin: 6rem 0;
+  border: 1px solid #000;
+}
+#section2 ul li {
+  font-family: Nanum Square B, sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  line-height: 5rem;
+}
+#section2 ul li span:nth-child(1) {
+  display: inline-block;
+  margin-top: 3rem;
+  text-decoration: line-through;
+}
+#section2 ul li span:nth-child(2) {
+  color: #D70F0F;
+}
+#section2 a {
+  display: inline-block;
+  width: 20rem;
+  height: 6rem;
+  background-color: #000;
+  font-size: 2.2rem;
+  font-family: Nanum Square B, sans-serif;
+  color: #fff;
+  text-align: center;
+  line-height: 6rem;
+  margin-top: 10rem;
+}
+
+/* #section2 .mySwiper {
+  overflow: hidden;
+  height: 100%;
+  margin-top: 8rem;
+}
+#section2 .mySwiper .swiper-wrapper img{
+  width: 30rem;
+  height: 40rem;
+  box-shadow: 2px 2px 5px #7B6965;
+  border-radius: 20px;
+} */
+
+
+/* ////////// footer */
+footer {
+  width: 100%;
+  background-color: #B3B3B3;
+  text-align: center;
+  color: #222;
+}
+footer .cs_center {
+  font-family: Nanum Square B, sans-serif;
+  line-height: 3.8rem;
+}
+footer .cs_center li:nth-child(1){font-size: 3rem;}
+footer .cs_center li:nth-child(2){
+  font-size: 2.2rem;
+  margin-bottom: 2rem;;
+}
+footer .cs_center li:nth-child(3){font-size: 1.8rem;}
+footer div img {
+  width: 20rem;
+  margin: 5rem;
+}
+footer .copyright {
+  font-family: Nanum Square EB, sans-serif;
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+}
