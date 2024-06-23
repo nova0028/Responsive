@@ -18,15 +18,246 @@
 /* DeskTop 1200px~ */
 @media screen and (min-width:1200px) {
 
+  .dsk_only {display: block;}
+  .dsk_nav {display: flex;}
+
   .mob_only {display: none;}
-  .mob_btn {display: none;}  /* 모바일메뉴는 안보이게 */
+  .mob_btn {display: none;}
 
-  html {font-size: 62.5%;}  /* 태블릿에서 크게 한것을 다시 원상태로 */
+  html {font-size: 62.5%;} 
 
-  section,
-  footer {padding: 15rem 0};
 
-  
+  header{
+  height: 8rem;
+  padding: 0;
+  /* color: #000; */
+/*   display: flex;
+  align-items: center; */
+  }
+  .header_left{
+    display: flex;
+    align-items: center;
+  }
+  .rel{
+    max-width: 120rem;
+    margin: auto;
+  }
+  header .rel{
+    max-width: 140rem;
+/*     align-items: center; */
+  }
+  /* .header_left .site_group{display: block;} */
+  .header_tit a{
+    min-height: 1.6rem;
+    margin-right: 2.7rem;
+    padding: 0;
+    margin: 0;
+  }
+  .header_right{display: flex; padding: 0;}
+  .dsk_nav li{margin-left: 2.5rem;}
+  .dsk_nav li a {
+    display: block;
+    padding: 3rem;
+    font-size: 2rem;
+  }
+  .sch_btn{
+    display: block;
+    margin-left: 6.7rem;
+    padding: 2rem;
+    
+  }
+  .sch_btn span {font-size: 4rem;}
+
+
+  /* Main */
+/*   main .tit_wrap img {
+    animation: bounce-ani 1s infinite alternate;
+  } */
+  main .tit_wrap img:first-of-type {
+    max-width: 65rem;
+    width: 65rem;
+    animation: bounce-ani1 2s ease infinite alternate;
+  }
+  main .tit_wrap img:last-of-type {
+    max-width: 40rem;
+    width: 40rem;
+    animation: bounce-ani2 2s ease infinite alternate;
+  }
+  main .tit_wrap h2 {font-size: 10rem;}
+
+  @keyframes bounce-ani1 {
+    0% {
+      transform: translateY(0);
+      top: 14%;
+      left: 18%;
+    }
+    50% {
+      transform: translateY(-2rem);
+      top: 14%;
+      left: 18%;
+    }
+    100% {
+      transform: translateY(0);
+      top: 14%;
+      left: 18%;
+    }
+  }
+  @keyframes bounce-ani2 {
+    0% {
+      transform: translateY(0);
+      top: 38%;
+      left: 53%;
+    }
+    50% {
+      transform: translateY(-2rem);
+      top: 38%;
+      left: 53%;
+    }
+    100% {
+      transform: translateY(0);
+      top: 38%;
+      left: 53%;
+    }
+  }
+
+
+
+
+
+
+
+
+  /* scrolling */
+/*   .scrolling .h_nav li a{color: #000;}
+  .scrolling .header_left .site_group{
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 3.6rem;
+  }
+  .scrolling .sch_btn{background: url(../img/btn_totalsearch.png) no-repeat center/1.8rem;} */
+
+  /* subNav */
+  .subNav{
+    right: 0;
+    left: 0;
+    top: 8rem;
+    height: 48rem;
+    background-color: #fafafa;
+    display: none;
+  }
+  .subNav .inner {
+    background-color: transparent;
+    display: flex;
+    /* justify-content: space-between; */
+    max-width: 124rem;
+    margin: auto;
+    padding-top: 3.6rem;
+  }
+
+
+  /* 서브메뉴 */
+  .sub_menu .depth1>li>span{display: none;}  /* 모바일용 메뉴는 안보이게 */
+  .sub_menu .sub_tit {
+    display: block;
+    color: #555;
+    font-size: 2rem;
+  }
+  .sub_menu .depth1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sub_menu .depth1>li {
+    width: calc(100% / 3 - 5rem);
+    padding-left: 5rem;
+  }
+  .sub_menu .depth2>li{
+    color:#a4a4a4;
+    list-style-type: circle;
+    padding-left: 2rem;
+    line-height: 3.3rem;
+  }
+  .sub_menu .depth2 {
+    display: block;
+    background-color: transparent;
+  }
+  /* dOpen이 BODY에 붙으면...*/
+  header:hover, 
+  .dOpen header {
+    background-color: #fff;
+  }
+/*   header:hover .dsk_nav li a,
+  .dOpen .h_nav li a {color:#000;} */
+
+  /* 검색 */
+  .search_wrap{
+    display: none;
+    position: fixed;
+    top:8rem;
+    width:100%;
+    left:0;
+    padding:4rem 0;
+    background-color:#ddd;
+    color: #555;
+  }
+  .search_wrap .inner {
+    max-width: 124rem;
+    margin: auto;
+    padding:0 2rem;
+    position: relative;
+  }
+  .search_wrap .dep1 label {display: none;}
+  .search_wrap .dep1 input {
+    width: 100%;
+    height: 10rem;
+    padding-right: 8rem;
+    font-size: 2.4rem;
+    border: 1px solid #000;;
+    border-width: 0 0 .1rem 0;
+    background: transparent;
+    display: block;
+    outline: none;
+  }
+  .search_wrap .dep1 input::placeholder {
+    font-weight: 900;
+    padding-left: 2rem;
+  }
+  .search_wrap .dep1 button {
+    position: absolute;
+    right:0;
+    top: 25%;
+    display: block;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .search_wrap .dep1 button span {
+    font-size: 4rem;
+    color: #555;
+  }
+  .search_wrap .dep2 {margin-top: 3.3rem;}
+  .search_wrap .dep2 span{
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding-left: 2rem;
+  }
+  .search_wrap .dep2 a{
+    position: relative;
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    color: rgba(225, 225, 225, .5);
+  }
+
+  /* sOpen이 BODY에 붙으면...*/
+  .sOpen header {background-color: #fff;}
+
+
+
+
+
+
+
+
+
 
   /* Section0 */
   #section0 .product1,
@@ -58,76 +289,18 @@
   #section1 div {display: flex;}
 
 
+  /* Section2 */
+  #section2 .dsk_only .mySwiper2 {
+    width: 1200px;
+  }
+  #section2 ul img {
+    width: 40rem;
+    height: 50rem;
+    max-width: 40rem;
+    max-height: 50rem;
+    object-fit: cover;
+    /* margin: 6rem 0; */
+  }
 
 
-
-
-
-
-  header{
-    height: 8rem;
-/*     padding: 0; */
-  }
-  .rel{
-    max-width: 120rem;
-    margin: auto;
-  }
-  header .rel{
-    max-width: 144rem;
-    align-items: center;
-  }
-  .header_tit a{
-    min-height: 1.6rem;
-    margin-right: 2.7rem;
-  }
-  .h_nav{display: flex;}
-  .h_nav li{margin-left: 2.5rem;}
-  .h_nav li a {
-    display: block;
-    padding: 1rem;
-    line-height: 2.2rem;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-  }
-  .sch_btn{
-    display: block;
-    width: 3.6rem;
-    height: 3.6rem;
-    margin-left: 6.7rem;
-    text-indent: -9999px;
-    background: url(../img/btn_totalsearch_white.svg) no-repeat center/1.8rem;
-  }
-  .header_left{
-    display: flex;
-    align-items: center;
-  }
-  .header_right{display: flex;}
-
-  /* scrolling */
-  .scrolling .h_nav li a{color: #000;}
-  .scrolling .header_left .site_group{
-    background-color: rgba(0,0,0,0.4);
-    border-radius: 3.6rem;
-  }
-  .scrolling .sch_btn{background: url(../img/btn_totalsearch.png) no-repeat center/1.8rem;}
-
-  /* subNav */
-  .subNav{
-    right: 0;
-    left: 0;
-    top: 8rem;
-    height: 48rem;
-    background-color: rgba(55,53,63,0.97);
-    display: none;
-  }
-  .subNav .inner {
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    max-width: 124rem;
-    margin: auto;
-    padding-top: 3.6rem
-  }
-  .subNav .site_group{display: none;}
 }

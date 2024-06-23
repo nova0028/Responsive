@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   const BODY = $("body");
   const schBtn = $('.sch_btn'); //검색버튼
-  const hNavBtn = $('.h_nav');  //메인메뉴전체
+  const hNavBtn = $('.dsk_nav');  //메인메뉴전체
   const subNav = $('.subNav'); //서브메뉴 전체
   const schWrap = $('.search_wrap'); //사용자가 입력할수 있는 검색창
 
