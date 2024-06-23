@@ -11,7 +11,7 @@ header{
   position: fixed;
   z-index: 9999;
   height: 6.3rem;
-  width: 100%;
+  width: 100vw;
   padding: 2rem 2rem 0;
   transition: .3s ease-in-out;
   font-family: Nanum Square B, sans-serif;
@@ -130,6 +130,9 @@ header .rel{
 }
 
 /* Main____________ */
+main .tit_wrap > * {
+  opacity: 0;
+}
 main{
   width: 100vw;
   height: 100vh;
@@ -142,12 +145,14 @@ main .tit_wrap img{
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-main .tit_wrap h2{
+main .tit_wrap .tit1,
+main .tit_wrap .tit2 {
   width: 100vw;
   overflow: hidden;
   position: absolute;
   font-family: "Orbitron", sans-serif;
   font-size: 5rem;
+  font-weight: 600;
   text-transform: uppercase;
 }
 main .tit_wrap .title-text{
@@ -172,7 +177,6 @@ main .tit2 .title-wrap{
   animation: slide-right 6s linear infinite;
 }
 
-
 @keyframes slide-left{
   0%{
     transform: translateX(0);
@@ -189,7 +193,6 @@ main .tit2 .title-wrap{
     transform: translateX(0%);
   }
 }
-
 
 /* swiper 공통 */
 .swiper {
@@ -226,13 +229,13 @@ main .tit2 .title-wrap{
   color: #555;
   margin-bottom: 10rem;
 }
-#section0 .p_img {
+#section0 .p_img{
   position: relative;
   width: 29rem;
   height: 33rem;
   margin: auto;
 }
-#section0 div.p_img:before {
+#section0 .p_img:before {
   content: '';
   position: absolute;
   top: 1rem;
@@ -243,6 +246,7 @@ main .tit2 .title-wrap{
   border-radius: 2rem;
   opacity: 0.2;
 }
+#section0 .p_img a{width: 100%;}
 #section0 .p_img img {
   width: 29rem;
   height: 33rem;
@@ -279,7 +283,7 @@ main .tit2 .title-wrap{
   line-height: 2.7rem;
   margin-bottom: 4rem;
 }
-#section0 a {
+#section0 .button a {
   display: inline-block;
   width: 11rem;
   height: 5rem;
@@ -290,7 +294,7 @@ main .tit2 .title-wrap{
   text-align: center;
   line-height: 5rem;
 }
-#section0 a:nth-of-type(2) {
+#section0 .button a:nth-of-type(2) {
   background-color: #000;
   margin-left: 2rem;
 }
@@ -303,6 +307,8 @@ main .tit2 .title-wrap{
   justify-content: center;
   text-align: center;
   font-size: 1.8rem;
+  background-color: #fffef8;
+  z-index: -2;
 }
 #section1 h2 {
   font-family: Nanum Square EB, sans-serif;
@@ -332,9 +338,10 @@ main .tit2 .title-wrap{
   font-size: 1.8rem;
   line-height: 3.5rem;
 }
-#section1 .underline {
+#section1 strong.underline  {
   position: relative;
   display: block;
+  z-index: 1;
 }
 #section1 .underline::before {
   content: '';
@@ -347,11 +354,10 @@ main .tit2 .title-wrap{
   background-color: #FFD65E;
   z-index: -1;
 }
-#section1 ul {
+#section1 .card {
   width: 30rem;
   height: 48rem;
   border-radius: 3rem;
-  box-shadow: 0.1rem 0.1rem 1rem #888;
   box-shadow: 0.1rem 0.1rem 1rem #9991c5;
   display: flex;
   flex-direction: column;
@@ -360,18 +366,32 @@ main .tit2 .title-wrap{
   background-color: #f8f7ff;
   background: linear-gradient(to bottom, #e8e3ff, #f8f7ff, #fff9a9);
 }
+#section1 .card img {
+  width: 20rem;
+  margin: 2.5rem 0 2.8rem;
+}
+#section1 .card span {margin: 0rem;}
+#section1 ul {
+  width: 30rem;
+  height: 48rem;
+  border-radius: 3rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem #cadde5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5rem;
+  background: linear-gradient(to bottom, #fffde3, #fff, #fffef8);
+}
 #section1 ul img {
   width: 20rem;
   margin: 2.5rem 0 2.8rem;
 }
-#section1 ul li:nth-child(2) {margin-bottom: 1.5rem;}
-#section1 a {
-  display: inline-block;
+#section1 .button {
   width: 16rem;
   height: 6rem;
   background-color: #ffdc73;
-  border-radius: 1rem;
-  box-shadow: 0.6rem 0.5rem 0rem #F9C6C7;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0rem #F9C6C7;
   font-size: 2.6rem;
   font-family: Nanum Square B, sans-serif;
   color: #222;
@@ -379,17 +399,16 @@ main .tit2 .title-wrap{
   line-height: 6rem;
   margin-top: 5rem;
 }
-#section1 a:hover {
+#section1 .button:hover {
   transform: translateY(-0.4rem);
   background-color: #ffd042;
 }
 
 /* ////////// section2 */
-
-
 #section2 {
   background-color: #F0F0F0;
 }
+#section2 h2 {text-indent: -9999px;}
 #section2 .swiper-slide {display: flex;}
 #section2 ul img {
   width: 26.4rem;
@@ -411,8 +430,7 @@ main .tit2 .title-wrap{
 #section2 ul li span:nth-child(2) {
   color: #D70F0F;
 }
-#section2 .button a {
-  display: inline-block;
+#section2 .button {
   width: 20rem;
   height: 6rem;
   background-color: #000;
@@ -421,7 +439,7 @@ main .tit2 .title-wrap{
   color: #fff;
   text-align: center;
   line-height: 6rem;
-  margin-top: 10rem;
+  margin: 10rem auto 0;
 }
 
 /* ////////// footer */
