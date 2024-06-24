@@ -383,7 +383,7 @@ main .tit2 .title-wrap{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5rem;
+  margin: 5rem 0;
   background: linear-gradient(to bottom, #fffde3, #fff, #fffef8);
 }
 #section1 ul img {
