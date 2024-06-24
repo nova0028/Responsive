@@ -16,6 +16,7 @@ header{
   transition: .3s ease-in-out;
   font-family: Nanum Square B, sans-serif;
   text-transform: capitalize;
+  background-color: #555;
 }
 header .rel{
   display: flex;
@@ -53,6 +54,7 @@ header .rel{
 .scrolling header{
   background-color: rgba(255, 255, 255, 0.688);
   border-bottom: 0.1rem solid #fff;
+  background-color: #555;
 }
 
 /* subNav */
