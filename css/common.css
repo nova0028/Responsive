@@ -1,2 +1,7 @@
 section,
 footer {padding: 12rem 0};
+
+.rel{
+  position: relative;
+  height: 100%;
+}
