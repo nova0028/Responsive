@@ -366,7 +366,7 @@ main .tit2 .title-wrap{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5rem;
+  margin: 6rem 0;
   background-color: #f8f7ff;
   background: linear-gradient(to bottom, #e8e3ff, #f8f7ff, #fff9a9);
 }
