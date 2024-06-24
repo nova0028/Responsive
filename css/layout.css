@@ -12,7 +12,7 @@ header{
   z-index: 9999;
   height: 6.3rem;
   width: 100%;
-  padding: 2rem 2rem 0;
+  padding: 2rem;
   transition: .3s ease-in-out;
   font-family: Nanum Square B, sans-serif;
   text-transform: capitalize;
