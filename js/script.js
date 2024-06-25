@@ -1,10 +1,6 @@
 let funcObj={
   f_0:function(){
     const tl = gsap.timeline();
-    tl.to("main img", {
-      opacity: 1,
-      y: -30
-    });
     tl.to("main .tit_wrap > *", {
       opacity: 1,
       stagger: 0.3,
@@ -12,7 +8,17 @@ let funcObj={
   },
   f_1:function(){
     const tl = gsap.timeline();
-    tl.to("#section0 .main_product", {
+    tl.to("#section0 .rel h2", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -30,
+    });
+    tl.to("#section0 .product1", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -30,
+    });
+    tl.to("#section0 .product2", {
       opacity: 1,
       stagger: 0.3,
       y: -30,
@@ -20,75 +26,21 @@ let funcObj={
   },
   f_2:function(){
     const tl = gsap.timeline();
-    tl.to("#section1 div", {
+    tl.to("#section1 .tit_wrap > *", {
       opacity: 1,
       stagger: 0.3,
       y: -30,
     });
-    tl.to(".s2_card", {
+    tl.to("#section1 div.card", {
       opacity: 1,
       stagger: 0.3,
       y: -30,
     });
-  },
-  f_3:function(){
-    const tl = gsap.timeline();
-    tl.to("#section3 .rel > *", {
-      opacity: 1,
-      stagger: 0.3,
-      y: -30,
-    });
-  },
-  f_4:function(){
-    const tl = gsap.timeline();
-
-    tl.to("#section4 .tit_wrap > * ", {
-      opacity: 1,
-      stagger: 0.3,
-      y: -30,
-    });
-    tl.to("#section4 .img_wrap > .deco ", {
-      opacity: 1,
-      stagger: 0.3,
-      y: -30,
-    });
-  },
-  f_5:function(){
-    const tl = gsap.timeline();
-
-    tl.to("#section5 .tit_wrap > * ", {
-      opacity: 1,
-      stagger: 0.3,
-      y: -30,
-    });
-    tl.to("#section5 .img_wrap > .deco ", {
-      opacity: 1,
-      stagger: 0.3,
-      y: -30,
-    });
-  },
-  f_6:function(){
-    const tl = gsap.timeline();
-
-    tl.to("#section6 .tit_wrap > * ", {
-      opacity: 1,
-      stagger: 0.3,
-      y: -30,
-    });
-    tl.to("#section6 .img_wrap > .deco ", {
-      opacity: 1,
-      stagger: 0.3,
-      y: -30,
-    });
-  },
-  f_7:function(){
-    const tl = gsap.timeline();
-
-    tl.to("#section7 .tit_wrap > * ", {
+    tl.to("#section1 h2", {
       opacity: 1,
       y: -30,
     });
-    tl.to(".s7_list li ", {
+    tl.to("#section1 .gift ul", {
       opacity: 1,
       stagger: 0.3,
       y: -30,
@@ -120,19 +72,20 @@ window.addEventListener('scroll', function(){
 
 
 
+
 // jquery_______start
 $(document).ready(function(){
 
   const BODY = $("body");
   const mobBtn = $(".mob_btn");
-  /* const scrollTopBtn = $('.scrollTop_btn'); */
+  const scrollTopBtn = $('.scrollTop_btn');
 
-  //(2)Mobile Menu
+  // Mobile Menu
   mobBtn.on("click", function () {
     BODY.toggleClass("mOpen");
   });
 
-  //(1)scroll-header
+  // scroll-header
   $(window).on("scroll", function () {
     let scroll = $(this).scrollTop();
     //console.log(scroll);
@@ -145,7 +98,7 @@ $(document).ready(function(){
     }
   });
 
-  //(3)Top Button scroll
+  // Top Button scroll
   scrollTopBtn.on('click',function(){
     window.scrollTo({
       top:0,

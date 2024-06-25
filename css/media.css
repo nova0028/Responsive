@@ -332,8 +332,6 @@
     object-fit: cover;
     border-radius: 1.2rem;
   }
-/*   #section2 .button .dsk_only {display: inline-block;}
-  #section2 .button {width: 35rem;} */
 
   /* Footer */
   footer .dsk_only {
@@ -358,5 +356,4 @@
     font-family: Nanum Square EB, sans-serif;
   }
 
-  section {padding: 20rem 0};
 }

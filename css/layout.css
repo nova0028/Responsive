@@ -16,7 +16,6 @@ header{
   transition: .3s ease-in-out;
   font-family: Nanum Square B, sans-serif;
   text-transform: capitalize;
-  background-color: #555;
 }
 header .rel{
   display: flex;
@@ -54,7 +53,6 @@ header .rel{
 .scrolling header{
   background-color: rgba(255, 255, 255, 0.688);
   border-bottom: 0.1rem solid #fff;
-  background-color: #555;
 }
 
 /* subNav */
@@ -303,15 +301,25 @@ main .tit2 .title-wrap{
   margin-left: 2rem;
 }
 
+/* Section0 Animation */
+#section0 h2 {
+  opacity: 0;
+}
+#section0 .product1 {
+  opacity: 0;
+}
+#section0 .product2 {
+  opacity: 0;
+}
+
 /* ////////// section1 */
-#section1 {
+#section1 .rel {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 1.8rem;
-  background-color: #fffef8;
   z-index: -2;
 }
 #section1 h2 {
@@ -323,7 +331,8 @@ main .tit2 .title-wrap{
 #section1 h2:last-of-type {margin-top: 10rem;}
 #section1 span {
   font-size: 2rem;
-  margin: 5rem;
+  margin: 5rem 0;
+  display: block;
 }
 #section1 span em {display: block;}
 #section1 strong {
@@ -334,7 +343,7 @@ main .tit2 .title-wrap{
 #section1 h3 {
   font-size: 2.2rem;
   color: #FF0000;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   position: relative;
 }
 #section1 em {
@@ -361,14 +370,14 @@ main .tit2 .title-wrap{
 #section1 .card {
   width: 30rem;
   height: 48rem;
-  border-radius: 3rem;
-  box-shadow: 0.1rem 0.1rem 1rem #9991c5;
+  border-radius: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 6rem 0;
-  background-color: #f8f7ff;
-  background: linear-gradient(to bottom, #e8e3ff, #f8f7ff, #fff9a9);
+  box-shadow: 0.4rem 0.4rem 0rem #d8d3ec;
+  background: linear-gradient(to bottom, #faf9ff, #ffffff, #fff9a9);
+  border: 1px solid #b4b4b4;
 }
 #section1 .card img {
   width: 20rem;
@@ -378,35 +387,38 @@ main .tit2 .title-wrap{
 #section1 ul {
   width: 30rem;
   height: 48rem;
-  border-radius: 3rem;
-  box-shadow: 0.1rem 0.1rem 0.5rem #cadde5;
+  border-radius: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 5rem 0;
-  background: linear-gradient(to bottom, #fffde3, #fff, #fffef8);
+  box-shadow: 0.4rem 0.4rem 0rem rgb(200, 194, 194);
+  background-color: #fff;
+  border: 1px solid #b4b4b4;
 }
 #section1 ul img {
   width: 20rem;
   margin: 2.5rem 0 2.8rem;
 }
 #section1 .button {
-  width: 16rem;
+  width: 20rem;
   height: 6rem;
-  background-color: #ffdc73;
-  border-radius: 0.5rem;
-  box-shadow: 0.3rem 0.3rem 0rem #F9C6C7;
-  font-size: 2.6rem;
+  background-color: #FF0008;
+  font-size: 2.2rem;
   font-family: Nanum Square B, sans-serif;
-  color: #222;
+  color: #fff;
   text-align: center;
   line-height: 6rem;
-  margin-top: 5rem;
+  margin: 10rem auto 0;
+  transition: .1s;
 }
-#section1 .button:hover {
-  transform: translateY(-0.4rem);
-  background-color: #ffd042;
-}
+#section1 .button:hover {background-color: #000;}
+
+/* Section1 Animation */
+#section1 .tit_wrap > * {opacity: 0;}
+#section1 div.card {opacity: 0;}
+#section1 h2 {opacity: 0;}
+#section1 .gift ul {opacity: 0;}
 
 /* ////////// section2 */
 #section2 {
@@ -444,7 +456,9 @@ main .tit2 .title-wrap{
   text-align: center;
   line-height: 6rem;
   margin: 10rem auto 0;
+  transition: .1s;
 }
+#section2 .button:hover {background-color: #FF0008;}
 
 /* ////////// footer */
 footer {
@@ -476,3 +490,28 @@ footer .copyright {
   font-size: 1.8rem;
   line-height: 2.7rem;
 }
+
+/* ////////// scrollTop_btn */
+.scrollTop_btn {
+  position: fixed;
+  z-index: 8888;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border: .1rem solid #ededed;
+  box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: #999;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.5s;
+}
+.scrollTop_btn span {
+  font-size: 3rem;
+  line-height: 5rem;
+}
+.scrollTop_btn.On {opacity: 1;}
