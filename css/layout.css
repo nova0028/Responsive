@@ -427,10 +427,10 @@ main .tit2 .title-wrap{
 #section1 .button:hover {background-color: #000;}
 
 /* Section1 Animation */
-/* #section1 .tit_wrap > * {opacity: 0;}
+#section1 .tit_wrap > * {opacity: 0;}
 #section1 div.card {opacity: 0;}
 #section1 h2 {opacity: 0;}
-#section1 .gift ul {opacity: 0;} */
+#section1 .gift ul {opacity: 0;}
 
 /* ////////// section2 */
 #section2 {
