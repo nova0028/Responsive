@@ -138,7 +138,7 @@ main .tit_wrap > * {
 main{
   width: 100vw;
   height: 100vh;
-  background: url(../image/background.png) no-repeat center/cover;
+  background: url(../image/background2.png) no-repeat center/cover;
 }
 main .tit_wrap img{
   position: absolute;
@@ -374,14 +374,26 @@ main .tit2 .title-wrap{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 6rem 0;
   box-shadow: 0.4rem 0.4rem 0rem #d8d3ec;
   background: linear-gradient(to bottom, #faf9ff, #ffffff, #fff9a9);
   border: 1px solid #b4b4b4;
 }
-#section1 .card img {
+#section1 .card_img {
   width: 20rem;
   margin: 2.5rem 0 2.8rem;
+  position: relative;
+}
+#section1 .card_img span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#section1 .card_img span:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #section1 .card span {margin: 0rem;}
 #section1 ul {
@@ -415,10 +427,10 @@ main .tit2 .title-wrap{
 #section1 .button:hover {background-color: #000;}
 
 /* Section1 Animation */
-#section1 .tit_wrap > * {opacity: 0;}
+/* #section1 .tit_wrap > * {opacity: 0;}
 #section1 div.card {opacity: 0;}
 #section1 h2 {opacity: 0;}
-#section1 .gift ul {opacity: 0;}
+#section1 .gift ul {opacity: 0;} */
 
 /* ////////// section2 */
 #section2 {

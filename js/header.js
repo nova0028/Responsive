@@ -12,14 +12,12 @@ $(document).ready(function(){
   });
 
   //Desktop Navigation____________________________
-  /*메인메뉴에 오버를 하면 서브가 나오고 이 상태에서 검색버튼을 누르면 검색창이 나오고,
-  검색창이 나왔을때는 메뉴에 오버를 했을때 서브메뉴가 안나오게 함 */
 
   const BODY = $("body");
-  const schBtn = $('.sch_btn'); //검색버튼
-  const hNavBtn = $('.dsk_nav');  //메인메뉴전체
-  const subNav = $('.subNav'); //서브메뉴 전체
-  const schWrap = $('.search_wrap'); //사용자가 입력할수 있는 검색창
+  const schBtn = $('.sch_btn');
+  const hNavBtn = $('.dsk_nav');
+  const subNav = $('.subNav');
+  const schWrap = $('.search_wrap');
 
   //서브메뉴와 검색창 둘중에 하나만 나오게 조건을 만들기 위함
   let hNavIs = false; 
@@ -29,16 +27,16 @@ $(document).ready(function(){
   subNav.mouseleave(hNav_reset);
 
   function hNav() {
-    if (!schWrapIs && !hNavIs) { //검색창과 서브메뉴가 나와있지 않았을때
+    if (!schWrapIs && !hNavIs) {
       subNav.slideDown(function(){
         BODY.addClass('dOpen');
       });
-      hNavIs = true; //서브메뉴가 나와있는 상태에서는 true로 변경
+      hNavIs = true;
     };
   };
 
   function hNav_reset() {
-    if (hNavIs) {  //메뉴가 나와있는 상태라면(true)
+    if (hNavIs) {
       subNav.slideUp(function () {
         BODY.removeClass('dOpen')
       });
@@ -48,18 +46,18 @@ $(document).ready(function(){
 
   //Search 
   schBtn.click(function () {
-    if (!schWrapIs) {  //false라면(schWrapIs나오지않았으면)
+    if (!schWrapIs) {
       sch();
-    } else { //나왔을때
+    } else {
       sch_reset();
     };
   });
 
   function sch() {
-    schWrap.slideDown();  //검색입력박스 나오게 함
-    BODY.addClass('sOpen');  //클래스 불러옴
+    schWrap.slideDown();
+    BODY.addClass('sOpen');
     schWrapIs = true; 
-    hNav_reset();  //검색창이 나오면 메뉴는 들어가야 함
+    hNav_reset();
   };
 
   function sch_reset() {
