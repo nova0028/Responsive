@@ -381,8 +381,7 @@ header .rel{
   align-items: center;
   margin: 6rem 0;
   box-shadow: 0.4rem 0.4rem 0rem #d8d3ec;
-  background: linear-gradient(to bottom, #faf9ff, #ffffff, #fff9a9);
-  background: linear-gradient(to bottom, #fff, #fffef5, #fffcdd);
+  background: linear-gradient(-45deg, #fff, #fffef5, #fffdeb);
   border: 2px solid #dbd3ff;
 }
 #section2 .card_img {
