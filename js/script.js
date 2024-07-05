@@ -31,14 +31,9 @@ let funcObj={
       stagger: 0.3,
       y: -20,
     });
-    /* tl.to("#section2 .card_img > *", {
-      opacity: 1,
-      stagger: 0.1,
-      y: 30,
-    }); */
     tl.to("#section2 .card_img span img", {
       opacity: 1,
-      stagger: 0.1,
+      stagger: 0.3,
       y: -10,
     });    
     tl.to("#section2 h2", {
@@ -47,12 +42,12 @@ let funcObj={
     });
     tl.to("#section2 .gift ul", {
       opacity: 1,
-      stagger: 0.3,
+      stagger: 0.2,
       y: -20,
     });
     tl.to("#section2 .gift ul img", {
       opacity: 1,
-      stagger: 0.1,
+      stagger: 0.3,
       y: -30,
     });
   },
