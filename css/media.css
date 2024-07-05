@@ -351,5 +351,10 @@
     font-size: 1.8rem;
     font-family: Nanum Square EB, sans-serif;
   }
+  footer .dsk_only .cs_center li:nth-child(4){
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #222;
+  }
 
 }
