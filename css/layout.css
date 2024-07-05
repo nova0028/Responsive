@@ -224,6 +224,7 @@ header .rel{
   flex-direction: column;
   align-items: center;
   justify-self: center;
+  text-align: center;
 }
 #section1 h2 {
   font-family: Nanum Square EB, sans-serif;
@@ -258,6 +259,7 @@ header .rel{
 }
 #section1 .p_caption {
   padding: 6rem 2rem;
+  text-align: left;
 }
 #section1 .p_caption h3 {
   font-size: 2.2rem;
@@ -408,12 +410,12 @@ header .rel{
   justify-content: center;
   margin: 5rem 0;
   box-shadow: 0.4rem 0.4rem 0rem rgb(200, 194, 194);
-  background: linear-gradient(45deg, #fff, #fffdeb, #fceeff);
+  background-color: #fff;
   border: 2px solid #ccc;
 }
 #section2 ul img {
   width: 20rem;
-  margin: 2.5rem/*  0 2.8rem */;
+  margin: 3rem 0;
 }
 #section2 .button {
   width: 20rem;
@@ -431,11 +433,10 @@ header .rel{
 
 /* Section2 Animation */
 #section2 .tit_wrap > * {opacity: 0;}
-#section2 .card .info > * {opacity: 0;}
 #section2 .card_img span img {opacity: 0;}
 #section2 h2 {opacity: 0;}
 #section2 .gift ul {opacity: 0;}
-#section2 .gift ul > * {opacity: 0;}
+#section2 .gift ul img {opacity: 0;}
 
 /* ////////// section3 */
 #section3 {
@@ -487,18 +488,19 @@ footer {
 footer .cs_center {
   font-family: Nanum Square B, sans-serif;
   line-height: 3.8rem;
+  text-align: center;
 }
-footer .cs_center li:nth-child(1){font-size: 2.8rem;}
-footer .cs_center li:nth-child(2){
+footer .cs_center li:nth-child(2){font-size: 2.8rem;}
+footer .cs_center li:nth-child(3){
   font-size: 2.2rem;
   margin-bottom: 2rem;
 }
-footer .cs_center li:nth-child(3){
+footer .cs_center li:nth-child(4){
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #222;
 }
-footer div img {
+footer img {
   width: 15rem;
   margin: 4rem;
 }

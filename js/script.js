@@ -39,14 +39,8 @@ let funcObj={
     tl.to("#section2 .card_img span img", {
       opacity: 1,
       stagger: 0.1,
-      y: -30,
-    });
-    tl.to("#section2 .card .info > *", {
-      opacity: 1,
-      stagger: 0.1,
-      y: -30,
-    });
-    
+      y: -10,
+    });    
     tl.to("#section2 h2", {
       opacity: 1,
       y: -20,
@@ -56,7 +50,7 @@ let funcObj={
       stagger: 0.3,
       y: -20,
     });
-    tl.to("#section2 .gift ul > *", {
+    tl.to("#section2 .gift ul img", {
       opacity: 1,
       stagger: 0.1,
       y: -30,
