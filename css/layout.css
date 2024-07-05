@@ -387,7 +387,7 @@ header .rel{
 }
 #section2 .card_img {
   width: 11em;
-  margin: 2.5rem 0 2.8rem;
+  margin: 4rem 0 2.8rem;
   position: relative;
 }
 #section2 .card_img span:nth-child(2) {
@@ -415,7 +415,7 @@ header .rel{
 }
 #section2 ul img {
   width: 20rem;
-  margin: 3rem 0;
+  margin: 4rem 0 1rem;
 }
 #section2 .button {
   width: 20rem;
