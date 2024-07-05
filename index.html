@@ -126,7 +126,7 @@
     </div>
   </header>
 
-  <main>
+  <section id="section0">
     <div class="rel">
       <div class="tit_wrap">
         <img src="image/main_product1.png" alt="serum">
@@ -151,9 +151,9 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <section id="section0">
+  <section id="section1">
     <div class="rel">
       <h2>Hero Product</h2>
       <div class="main_product">
@@ -189,7 +189,7 @@
     </div>
   </section>
 
-  <section id="section1">
+  <section id="section2">
     <div class="rel">
       <div class="tit_wrap">
         <h2>정기배송</h2>
@@ -206,43 +206,45 @@
           <strong class="underline">정기배송으로 보내드릴게요.</strong>
         </span>
       </div>
-      <div class="card">
-        <!-- <span><img src="image/icon1.png" alt="icon"></span> -->
-        <div class="card_img">
-          <span><img src="image/icon1-1.png" alt="icon"></span>
-          <span><img src="image/icon1-2.png" alt="icon"></span>
-          <span><img src="image/icon1-3.png" alt="icon"></span>
+      <div class="card_wrap">
+        <div class="card">
+          <!-- <span><img src="image/icon1.png" alt="icon"></span> -->
+          <div class="card_img">
+            <span><img src="image/icon1-1.png" alt="icon"></span>
+            <span><img src="image/icon1-2.png" alt="icon"></span>
+            <span><img src="image/icon1-3.png" alt="icon"></span>
+          </div>
+          <span class="info">
+            <strong>보내드려요</strong>
+            <em>할인된 가격으로</em>
+            <em>무료배송으로</em>
+            <em>때로는 사은품도 같이</em>
+          </span>
         </div>
-        <span>
-          <strong>보내드려요</strong>
-          <em>할인된 가격으로</em>
-          <em>무료배송으로</em>
-          <em>때로는 사은품도 같이</em>
-        </span>
-      </div>
-      <div class="card">
-        <div class="card_img">
-          <span><img src="image/icon2-1.png" alt="icon"></span>
-          <span><img src="image/icon2-2.png" alt="icon"></span>
-          <span><img src="image/icon2-3.png" alt="icon"></span>
+        <div class="card">
+          <div class="card_img">
+            <span><img src="image/icon2-1.png" alt="icon"></span>
+            <span><img src="image/icon2-2.png" alt="icon"></span>
+            <span><img src="image/icon2-3.png" alt="icon"></span>
+          </div>
+          <span class="info">
+            <strong>마음대로 선택하세요</strong>
+            <em>나를 위해 자유롭게,</em>
+            <em>제품 소진 시기에 따라</em>
+          </span>
         </div>
-        <span>
-          <strong>마음대로 선택하세요</strong>
-          <em>나를 위해 자유롭게,</em>
-          <em>제품 소진 시기에 따라</em>
-        </span>
-      </div>
-      <div class="card">
-        <div class="card_img">
-          <span><img src="image/icon3-1.png" alt="icon"></span>
-          <span><img src="image/icon3-2.png" alt="icon"></span>
-          <span><img src="image/icon3-3.png" alt="icon"></span>
+        <div class="card">
+          <div class="card_img">
+            <span><img src="image/icon3-1.png" alt="icon"></span>
+            <span><img src="image/icon3-2.png" alt="icon"></span>
+            <span><img src="image/icon3-3.png" alt="icon"></span>
+          </div>
+          <span class="info">
+            <strong>알려드려요</strong>
+            <em>결제 1일전</em>
+            <em>문자메시지 알림으로</em>
+          </span>
         </div>
-        <span>
-          <strong>알려드려요</strong>
-          <em>결제 1일전</em>
-          <em>문자메시지 알림으로</em>
-        </span>
       </div>
       <h2>정기배송 사은품</h2>
       <div class="gift">
@@ -274,7 +276,7 @@
     </div>
   </section>
 
-  <section id="section2">
+  <section id="section3">
     <h2>정기배송 혜택</h2>
     <div class="mob_only">
       <div class="swiper mySwiper1">
@@ -403,8 +405,10 @@
     <div class="dsk_only">
       <div class="address">
         <ul>
-          <li>상호 : 주식회사CMG제약대표자 : 이주형 | 개인정보책임자 : 서진희</li>
-          <li>사업자등록번호 : 134-81-71976 | 이메일 : cmgpharma@chamc.co.kr</li>
+          <li>상호 : 주식회사CMG제약</li>
+          <li>대표자 : 이주형 | 개인정보책임자 : 서진희</li>
+          <li>사업자등록번호 : 134-81-71976</li>
+          <li>이메일 : cmgpharma@chamc.co.kr</li>
         </ul>
         <ul>
           <li>통신판매업신고번호 : 제2018-서울강남-02101호</li>
@@ -437,8 +441,8 @@
 <!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper(".mySwiper1", {
-    slidesPerView: 1.5,
-    spaceBetween: 20,
+    slidesPerView: 1.3,
+    spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -447,7 +451,7 @@
 </script>
 <script>
   var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 2.5,
+    slidesPerView: 2.8,
     spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",

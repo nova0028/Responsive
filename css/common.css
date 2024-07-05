@@ -1,4 +1,5 @@
-section, footer {padding: 20rem 0};
+footer {padding: 10rem;}
+section {padding: 20rem 3rem};
 
 .rel{
   position: relative;

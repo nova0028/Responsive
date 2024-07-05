@@ -1,24 +1,24 @@
 let funcObj={
   f_0:function(){
     const tl = gsap.timeline();
-    tl.to("main .tit_wrap > *", {
+    tl.to("#section0 .tit_wrap > *", {
       opacity: 1,
       stagger: 0.3,
     });
   },
   f_1:function(){
     const tl = gsap.timeline();
-    tl.to("#section0 .rel h2", {
+    tl.to("#section1 .rel h2", {
       opacity: 1,
       stagger: 0.3,
       y: -30,
     });
-    tl.to("#section0 .product1", {
+    tl.to("#section1 .product1", {
       opacity: 1,
       stagger: 0.3,
       y: -30,
     });
-    tl.to("#section0 .product2", {
+    tl.to("#section1 .product2", {
       opacity: 1,
       stagger: 0.3,
       y: -30,
@@ -26,23 +26,39 @@ let funcObj={
   },
   f_2:function(){
     const tl = gsap.timeline();
-    tl.to("#section1 .tit_wrap > *", {
+    tl.to("#section2 .tit_wrap > *", {
       opacity: 1,
       stagger: 0.3,
+      y: -20,
+    });
+    /* tl.to("#section2 .card_img > *", {
+      opacity: 1,
+      stagger: 0.1,
+      y: 30,
+    }); */
+    tl.to("#section2 .card_img span img", {
+      opacity: 1,
+      stagger: 0.1,
       y: -30,
     });
-    tl.to("#section1 div.card", {
+    tl.to("#section2 .card .info > *", {
+      opacity: 1,
+      stagger: 0.1,
+      y: -30,
+    });
+    
+    tl.to("#section2 h2", {
+      opacity: 1,
+      y: -20,
+    });
+    tl.to("#section2 .gift ul", {
       opacity: 1,
       stagger: 0.3,
-      y: -30,
+      y: -20,
     });
-    tl.to("#section1 h2", {
+    tl.to("#section2 .gift ul > *", {
       opacity: 1,
-      y: -30,
-    });
-    tl.to("#section1 .gift ul", {
-      opacity: 1,
-      stagger: 0.3,
+      stagger: 0.1,
       y: -30,
     });
   },

@@ -8,16 +8,16 @@
   #section3 .dsk_only {display: block;}
   footer .mob_only {display: block;}
 
-  #section1 .dsk_only {display: inline-block;}
-  #section1 .button {
+  #section2 .dsk_only {display: inline-block;}
+  #section2 .button {
     width: 35rem;
     margin-top: 10rem;
   }
-  #section1 .card,
-  #section1 .gift ul {width: 40rem;}
+  #section2 .card,
+  #section2 .gift ul {width: 40rem;}
 
-  #section2 .button .dsk_only {display: inline-block;}
-  #section2 .button {width: 35rem;}
+  #section3 .button .dsk_only {display: inline-block;}
+  #section3 .button {width: 35rem;}
 
   
 }
@@ -70,34 +70,34 @@
   }
   .sch_btn span {font-size: 4rem;}
 
-  main .tit_wrap img:first-of-type {
-    max-width: 60rem;
-    width: 60rem;
+  #section0 .tit_wrap img:first-of-type {
+    max-width: 50rem;
+    width: 50rem;
     animation: bounce-ani1 2s ease infinite alternate;
   }
-  main .tit_wrap img:last-of-type {
-    max-width: 40rem;
-    width: 40rem;
+  #section0 .tit_wrap img:last-of-type {
+    max-width: 35rem;
+    width: 35rem;
     animation: bounce-ani2 2s ease infinite alternate;
   }
-  main .tit_wrap .tit1,
-  main .tit_wrap .tit2 {font-size: 10rem;}
+  #section0 .tit_wrap .tit1,
+  #section0 .tit_wrap .tit2 {font-size: 10rem;}
 
   @keyframes bounce-ani1 {
     0% {
       transform: translateY(0);
       top: 14%;
-      left: 18%;
+      left: 20%;
     }
     50% {
       transform: translateY(-2rem);
       top: 14%;
-      left: 18%;
+      left: 20%;
     }
     100% {
       transform: translateY(0);
       top: 14%;
-      left: 18%;
+      left: 20%;
     }
   }
   @keyframes bounce-ani2 {
@@ -230,24 +230,24 @@
   /* sOpen */
   .sOpen header {background-color: #fff;}
 
-  /* Section0 */
-  #section0 h2 {font-size: 4.5rem;}
-  #section0 .product1,
-  #section0 .product2 {
+  /* Section1 */
+  #section1 h2 {font-size: 4.5rem;}
+  #section1 .product1,
+  #section1 .product2 {
     width: 50rem;
   }
-  #section0 .main_product {
+  #section1 .main_product {
     display: flex;
     justify-content: space-around;
     width: 120rem;
   }
-  #section0 .p_img,
-  #section0 .p_img img {
+  #section1 .p_img,
+  #section1 .p_img img {
     width: 50rem;
   }
-  #section0 .main_product h3 {line-height: 3rem;}
-  #section0 .p_caption {padding-left: 3rem;}
-  #section0 .p_caption h3:before {
+  #section1 .main_product h3 {line-height: 3rem;}
+  #section1 .p_caption {padding-left: 3rem;}
+  #section1 .p_caption h3:before {
     position: absolute;
     content: '';
     top: 50%;
@@ -257,30 +257,30 @@
     background-color: #FF0000;
   }
 
-  /* Section1 */
-  #section1 h2 {
+  /* Section2 */
+  #section2 h2 {
     font-size: 4.5rem;
     margin: 11rem 0;
   }
-  #section1 h2:last-of-type {margin-top: 20rem;}
-  #section1 span {
+  #section2 h2:last-of-type {margin-top: 20rem;}
+  #section2 span {
     font-size: 2.5rem;
     margin: 7rem;
   }
-  #section1 strong {
+  #section2 strong {
     line-height: 6rem;
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
-  #section1 h3 {
+  #section2 h3 {
     font-size: 2.7rem;
     margin: 7rem;
     position: relative;
   }
-  #section1 em {
-    font-size: 2.3rem;
+  #section2 em {
+    font-size: 2rem;
     line-height: 4rem;
   }
-  #section1 .card {
+  #section2 .card {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
@@ -288,38 +288,39 @@
     height: 40rem;
     margin-top: 8rem;
   }
-  #section1 .card:nth-of-type(2) {flex-direction: row;}
-  #section1 .card span {
+  #section2 .card:nth-of-type(2) {flex-direction: row;}
+  #section2 .card span {
     margin: 0 6rem;
   }
-  #section1 .card .card_img {
+  #section2 .card .card_img {
     width: 35rem;
     max-width: 35rem;
     margin: 2.5rem 0 2.8rem;
   }
-  #section1 .card strong {
+  #section2 .card strong {
     display: inline-block;
     margin-bottom: 1.5rem;
   }
-  #section1 .gift {
+  #section2 em:first-of-type {margin-top: 0;}
+  #section2 .gift {
     width: 120rem;
     display: flex;
   }
-  #section1 .gift ul {
+  #section2 .gift ul {
     width: 40rem;
     margin: 3rem;
   }
-  #section1 .gift strong {
+  #section2 .gift strong {
     font-family: Nanum Square B, sans-serif;
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
-  #section1 .gift em {font-size: 2.3rem;}
+  #section2 .gift em {font-size: 2.2rem;}
 
-  /* Section2 */
-  #section2 .dsk_only .mySwiper2 {
+  /* Section3 */
+  #section3 .dsk_only .mySwiper2 {
     width: 1200px;
   }
-  #section2 ul img {
+  #section ul img {
     width: 35rem;
     height: 50rem;
     max-width: 35rem;
