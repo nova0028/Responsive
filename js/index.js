@@ -1,99 +1,94 @@
-$(document).ready(function(){
+let funcObj={
+  f_0:function(){
+    const tl = gsap.timeline();
+    tl.to("#section0 .tit_wrap > *", {
+      opacity: 1,
+      stagger: 0.3,
+    });
+  },
+  f_1:function(){
+    const tl = gsap.timeline();
+    tl.to("#section1 .rel h2", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -30,
+    });
+    tl.to("#section1 .product1", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -30,
+    });
+    tl.to("#section1 .product2", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -30,
+    });
+  },
+  f_2:function(){
+    const tl = gsap.timeline();
+    tl.to("#section2 .tit_wrap > *", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -20,
+    });
+    tl.to("#section2 .card_img span img", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -10,
+    });    
+    tl.to("#section2 h2", {
+      opacity: 1,
+      y: -20,
+    });
+    tl.to("#section2 .gift ul", {
+      opacity: 1,
+      stagger: 0.2,
+      y: -20,
+    });
+    tl.to("#section2 .gift ul img", {
+      opacity: 1,
+      stagger: 0.3,
+      y: -30,
+    });
+  },
+};
 
-  //Mobile Navigation____________________________
-  const mobSubBtn = $('.subNav .sub_menu .depth1>li');
+let section = document.querySelectorAll('section');
 
-  mobSubBtn.click(function(){
-    $(this).siblings().find(".depth2").slideUp(300);
-    $(this).siblings().removeClass("active");
+funcObj['f_0']();  //스크롤과 상관없이 첫번째는 먼저 실행이 되게 함
 
-    $(this).find(".depth2").slideToggle(200);
-    $(this).toggleClass("active");
-  });
+window.addEventListener('scroll', function(){
 
-  //Desktop Navigation____________________________
-  /*메인메뉴에 오버를 하면 서브가 나오고 이 상태에서 검색버튼을 누르면 검색창이 나오고,
-  검색창이 나왔을때는 메뉴에 오버를 했을때 서브메뉴가 안나오게 함 */
+  let scroll = document.scrollingElement.scrollTop;
+  let outHeight = this.window.outerHeight;  //브라우저의 높이값
 
-  const BODY = $("body");
-  const schBtn = $('.sch_btn'); //검색버튼
-  const hNavBtn = $('.h_nav');  //메인메뉴전체
-  const subNav = $('.subNav'); //서브메뉴 전체
-  const schWrap = $('.search_wrap'); //사용자가 입력할수 있는 검색창
+  //console.log(scroll,outHeight);
 
-  //서브메뉴와 검색창 둘중에 하나만 나오게 조건을 만들기 위함
-  let hNavIs = false; 
-  let schWrapIs = false;
-
-  hNavBtn.mouseenter(hNav);
-  subNav.mouseleave(hNav_reset);
-
-  function hNav() {
-    if (!schWrapIs && !hNavIs) { //검색창과 서브메뉴가 나와있지 않았을때
-      subNav.slideDown(function(){
-        BODY.addClass('dOpen');
-      });
-      hNavIs = true; //서브메뉴가 나와있는 상태에서는 true로 변경
-    };
+  for(let i =0; i<section.length;i++){
+    //스크롤이 되었을때 섹션이 뷰포트에 들어왔으면 그때 섹션함수를 실행함
+    if(scroll > section[i].offsetTop - outHeight &&
+      scroll < section[i].offsetTop - outHeight + section[i].offsetHeight){
+        funcObj['f_'+i]();
+        console.log(i);
+    }
   };
-
-  function hNav_reset() {
-    if (hNavIs) {  //메뉴가 나와있는 상태라면(true)
-      subNav.slideUp(function () {
-        BODY.removeClass('dOpen')
-      });
-      hNavIs = false;
-    };
-  };
-
-  //Search 
-  schBtn.click(function () {
-    if (!schWrapIs) {  //false라면(schWrapIs나오지않았으면)
-      sch();
-    } else { //나왔을때
-      sch_reset();
-    };
-  });
-
-  function sch() {
-    schWrap.slideDown();  //검색입력박스 나오게 함
-    BODY.addClass('sOpen');  //클래스 불러옴
-    schWrapIs = true; 
-    hNav_reset();  //검색창이 나오면 메뉴는 들어가야 함
-  };
-
-  function sch_reset() {
-    schWrap.slideUp();
-    BODY.removeClass('sOpen');
-    schWrapIs = false;
-  };
-  
-  //브라우저 크기가 변경되었을때 초기화
-  $(window).on('load resize',function(){
-    let w = $(window).innerWidth();
-
-    if(w < 1200) {
-      hNav_reset();
-      sch_reset();
-      subNav.removeAttr('style'); 
-    };
-  });
 
 });
+
 
 // jquery_______start
 $(document).ready(function(){
 
   const BODY = $("body");
   const mobBtn = $(".mob_btn");
-  /* const scrollTopBtn = $('.scrollTop_btn'); */
+  const scrollTopBtn = $('.scrollTop_btn');
 
-  //(2)Mobile Menu
+  // Mobile Menu
   mobBtn.on("click", function () {
     BODY.toggleClass("mOpen");
   });
 
-  //(1)scroll-header
+  // scroll-header
   $(window).on("scroll", function () {
     let scroll = $(this).scrollTop();
     //console.log(scroll);
@@ -106,21 +101,12 @@ $(document).ready(function(){
     }
   });
 
-  //(3)Top Button scroll
+  // Top Button scroll
   scrollTopBtn.on('click',function(){
     window.scrollTo({
       top:0,
       behavior:'smooth'
     });
-  });
-
-  //footer
-  const ftrBtn = $('.family_wrap>a');
-  const ftrWrap = $('.family_wrap');
-
-  ftrBtn.on('click',function(e){
-    e.preventDefault();
-    ftrWrap.toggleClass('active');
   });
 
 });

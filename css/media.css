@@ -17,9 +17,7 @@
   #section2 .gift ul {width: 40rem;}
 
   #section3 .button .dsk_only {display: inline-block;}
-  #section3 .button {width: 35rem;}
-
-  
+  #section3 .button {width: 35rem;} 
 }
 
 /* DeskTop 1200px~ */
@@ -134,7 +132,6 @@
     margin: auto;
     padding-top: 3.6rem;
   }
-
 
   /* 서브메뉴 */
   .sub_menu .depth1>li>span{display: none;}
@@ -356,5 +353,4 @@
     line-height: 2.4rem;
     color: #222;
   }
-
 }

@@ -1,3 +1,11 @@
+footer {padding: 10rem;}
+section {padding: 20rem 1.5rem};
+
+.rel{
+  position: relative;
+  height: 100%;
+}
+
 body {color: #333;}
 .dsk_only,
 .dsk_nav,
@@ -447,7 +455,6 @@ header .rel{
   width: 26.4rem;
   height: 36.8rem;
   object-fit: cover;
-  margin: 6rem 0;
 }
 #section3 ul li {
   font-family: Nanum Square B, sans-serif;
